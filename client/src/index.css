@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 
+By default, the amount of space an element will takes equals its height/width + padding
+
+20px, 2px => 24px  
+ */
