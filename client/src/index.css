@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: black;
+  color: white;
+}
+
 /* 
 By default, the amount of space an element will takes equals its height/width + padding
 
