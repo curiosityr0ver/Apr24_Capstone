@@ -1,5 +1,29 @@
 .container {
     height: 100vh;
     width: 100vw;
-    background-color: yellow;
+    display: flex;
+    flex-direction: row;
+}
+
+.left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: url("../assets/bg.png");
+
+}
+
+.right {
+    width: 50%;
+    height: 100%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.footer span {
+    color: #72DB73;
+    cursor: pointer;
 }
