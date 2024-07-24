@@ -1,4 +1,5 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { AppContext } from "../context/AppContext";
 import styles from "./RegisterPage.module.css";
 import Form from "../components/Form";
@@ -6,6 +7,24 @@ import validateForm from "../utils/validateForm";
 
 export default function RegisterPage() {
 	const { user, setUser } = useContext(AppContext);
+	const [name, setName] = useState(user.name || "");
+	const [email, setEmail] = useState(user.email || "");
+	const [username, setUsername] = useState(user.username || "");
+	const [phone, setPhone] = useState(user.phone || "");
+	const [error, setError] = useState();
+	const navigate = useNavigate();
+
+	const submitHandler = () => {
+		const { valid, invalid } = validateForm(name, email, username, phone);
+		if (!valid) {
+			setError({ ...invalid });
+			return;
+		}
+
+		setError(null);
+		setUser({ name, email, username, phone });
+		navigate("/genres");
+	};
 
 	return (
 		<div className={styles.container}>
@@ -18,7 +37,19 @@ export default function RegisterPage() {
 					<h2 className={styles.heading}>Super app</h2>
 					<h3 className={styles.subHeading}>Create your new account</h3>
 				</div>
-				<Form user={user} setUser={setUser} />
+				<Form
+					name={name}
+					setName={setName}
+					email={email}
+					setEmail={setEmail}
+					username={username}
+					setUsername={setUsername}
+					phone={phone}
+					setPhone={setPhone}
+					error={error}
+					setError={setError}
+					submitHandler={submitHandler}
+				/>
 				<div className={styles.footer}>
 					<p>
 						By clicking on Sign up. you agree to Superapp{" "}
