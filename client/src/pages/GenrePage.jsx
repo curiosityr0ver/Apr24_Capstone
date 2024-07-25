@@ -31,7 +31,7 @@ function GenrePage() {
 		if (selectedGenres.length < 3) {
 			setError(true);
 		} else {
-			// navigate("/carousel");
+			navigate("/carousel");
 		}
 	};
 

@@ -1,0 +1,23 @@
+.container {
+    height: 100%;
+    width: 100%;
+    background: #5746EA;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+}
+
+.avatar img {
+    width: 30%;
+    object-fit: cover;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+}
+
+.genres {
+    display: flex;
+    flex-wrap: wrap;
+}
