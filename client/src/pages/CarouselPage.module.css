@@ -10,15 +10,12 @@
 
 .profileWidget {
     grid-area: 1 / 1 / 3 / 3;
-    background-color: rgba(9, 120, 172, 0.5);
 }
 
 .weatherWidget {
     grid-area: 3 / 1 / 4 / 3;
-    background-color: rgba(183, 153, 141, 0.5);
 }
 
 .newsWidget {
     grid-area: 1 / 3 / 4 / 4;
-    background-color: rgba(81, 163, 4, 0.5);
 }

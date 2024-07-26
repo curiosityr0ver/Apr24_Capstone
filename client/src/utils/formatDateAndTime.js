@@ -5,7 +5,6 @@ const formatDateAndTime = (date = Date.now()) => {
     const formattedDate = newDate.toLocaleTimeString("en-US", {
         hour: "numeric",
         minute: "numeric",
-        second: "numeric",
     });
     const formattedTime = newDate.toLocaleDateString("en-US", {
         month: "long",

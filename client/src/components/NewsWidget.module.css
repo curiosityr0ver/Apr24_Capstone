@@ -1,0 +1,32 @@
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    position: relative;
+}
+
+.heading {
+    background-color: black;
+    padding: 10px 15px;
+    opacity: 0.75;
+    color: white;
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.heading p:last-of-type {
+    font-size: 0.8rem;
+}
+
+
+.header img {
+    width: 100%;
+    object-fit: cover;
+}

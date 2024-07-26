@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const BASE_URL = " http://api.weatherapi.com/v1";
-const API_KEY = import.meta.env.VITE_SOME_KEY;
+const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
 
 const fetchWeather = async (city = "Lucknow") => {
     try {
@@ -11,7 +11,6 @@ const fetchWeather = async (city = "Lucknow") => {
                 q: city,
             },
         });
-        console.log(data);
         return data;
     } catch (error) {
         console.error(error);

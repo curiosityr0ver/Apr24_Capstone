@@ -12,12 +12,12 @@ function ProfileWidget() {
 				<img src={userAvatar} />
 			</div>
 			<div className={styles.details}>
-				<p className={styles.name}>{user.name}</p>
-				<p className={styles.email}>{user.email}</p>
-				<p className={styles.username}>{user.username}</p>
+				<p className={styles.name}>{user?.name}</p>
+				<p className={styles.email}>{user?.email}</p>
+				<p className={styles.username}>{user?.username}</p>
 
 				<div className={styles.genres}>
-					{selectedGenres.slice(0, 4).map((genre, index) => (
+					{selectedGenres?.slice(0, 4)?.map((genre, index) => (
 						<div key={index} className={styles.pill}>
 							{genre}
 						</div>
