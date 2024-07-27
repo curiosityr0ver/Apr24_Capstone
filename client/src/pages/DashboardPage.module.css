@@ -5,6 +5,7 @@
     gap: 20px 40px;
     width: 100vw;
     height: 100vh;
+    padding: 80px;
 }
 
 .div1 {
@@ -19,7 +20,6 @@
 
 .div3 {
     grid-area: 4 / 1 / 6 / 3;
-    background-color: rgba(221, 246, 128, 0.5);
 }
 
 .div4 {

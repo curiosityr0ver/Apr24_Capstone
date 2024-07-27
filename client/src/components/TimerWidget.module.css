@@ -1,0 +1,29 @@
+.container {
+    height: 100%;
+    width: 100%;
+    background: #1E2343;
+    border-radius: 20px;
+    display: flex;
+}
+
+.left {
+    width: 30%;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.configure {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.cell {
+    display: flex;
+    flex-direction: column;
+}
