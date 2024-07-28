@@ -3,6 +3,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    border-radius: 20px;
 }
 
 .header {
@@ -29,4 +30,9 @@
 .header img {
     width: 100%;
     object-fit: cover;
+}
+.body{
+    background-color: white;
+    color:black;
+    flex:1;
 }
