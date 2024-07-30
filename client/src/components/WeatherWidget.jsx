@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import fetchWeather from "../api/fetchWeather";
 import styles from "./WeatherWidget.module.css";
-import formateDateAndTime from "../utils/formatDateAndTime";
+import formatDateAndTime from "../utils/formatDateAndTime";
 
 function WeatherWidget() {
   const [weatherData, setWeatherData] = useState();
-  const [dateTime, setDateTime] = useState();
+  let dateTime = formatDateAndTime();
 
   useEffect(() => {
     fetchWeather("Chennai").then((data) => {
@@ -20,20 +20,16 @@ function WeatherWidget() {
         humidity,
       });
 
-      const { date, time } = formateDateAndTime();
-      setDateTime({ date, time });
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      dateTime = formatDateAndTime();
     });
   }, [setWeatherData]);
 
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        {dateTime && (
-          <>
-            <div className={styles.date}>{dateTime.date}</div>
-            <div className={styles.time}>{dateTime.time}</div>
-          </>
-        )}
+        <div className={styles.date}>{dateTime.date}</div>
+        <div className={styles.time}>{dateTime.time}</div>
       </div>
       <div className={styles.content}>
         {weatherData ? (
