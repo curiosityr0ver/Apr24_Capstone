@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
 import fetchWeather from "../api/fetchWeather";
 import styles from "./WeatherWidget.module.css";
-import formatDateAndTime from "../utils/formatDateAndTime";
 
 function WeatherWidget() {
   const [weatherData, setWeatherData] = useState();
-  let dateTime = formatDateAndTime();
+
+  const [dateTime, setDateTime] = useState({
+    date: new Date().toLocaleDateString(),
+    time: new Date().toLocaleTimeString(),
+  });
 
   useEffect(() => {
     fetchWeather("Chennai").then((data) => {
@@ -19,11 +22,17 @@ function WeatherWidget() {
         wind: wind_kph,
         humidity,
       });
-
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-      dateTime = formatDateAndTime();
     });
-  }, [setWeatherData]);
+
+    const interval = setInterval(() => {
+      setDateTime({
+        date: new Date().toLocaleDateString(),
+        time: new Date().toLocaleTimeString(),
+      });
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className={styles.container}>
