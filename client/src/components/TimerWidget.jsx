@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./TimerWidget.module.css";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { CircularProgressbar } from "react-circular-progressbar";
 
 const HOURS_STEP = 3600;
 const MINUTES_STEP = 60;
@@ -8,20 +9,12 @@ const SECONDS_STEP = 1;
 
 function TimerWidget() {
 	const [totalSeconds, setTotalSeconds] = useState(10);
+	const [cachedSeconds, setCachedSeconds] = useState(10);
 	const [isRunning, setIsRunning] = useState(false);
 
 	useEffect(() => {
 		if (isRunning) {
 			const interval = setInterval(() => {
-				const newTotalSeconds = totalSeconds - 1 < 0 ? 0 : totalSeconds - 1;
-				// setState
-				// Approach1
-				// newValue = f(oldValue)
-				// setState(newValue)
-
-				// Approach2
-				//setState(value => f(value))
-
 				setTotalSeconds((totalSeconds) => {
 					if (totalSeconds > 0) return totalSeconds - 1;
 					else {
@@ -43,12 +36,22 @@ function TimerWidget() {
 
 	const stepHandler = (step) => {
 		if (isRunning || (step < 0 && totalSeconds - step < 0)) return;
+		setCachedSeconds(totalSeconds + step);
 		setTotalSeconds(totalSeconds + step);
 	};
 
 	return (
 		<div className={styles.container}>
-			<div className={styles.left}>{totalSeconds}</div>
+			<div className={styles.left}>
+				<CircularProgressbar
+					value={totalSeconds}
+					maxValue={1}
+					text={totalSeconds}
+					strokeWidth={10}
+					background={true}
+				/>
+				;
+			</div>
 			<div className={styles.right}>
 				<div className={styles.configure}>
 					<div className={styles.cell}>
