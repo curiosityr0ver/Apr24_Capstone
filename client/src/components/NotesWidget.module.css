@@ -1,0 +1,42 @@
+.container {
+  height: 100%;
+  width: 100%;
+  background: #f1c75b;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 15px;
+}
+
+.container textarea {
+  background: transparent;
+  border: none;
+  resize: none;
+  width: 100%;
+  flex: 1;
+  overflow-y: scroll;
+}
+
+.container textarea:focus {
+  outline: none;
+}
+
+.container ::-webkit-scrollbar {
+  border-radius: 10px;
+}
+
+.container ::-webkit-scrollbar-thumb {
+  width: 2px;
+  background: #ffe6a6;
+  -webkit-border-radius: 1ex;
+  border: 4px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  border-radius: 10px;
+}

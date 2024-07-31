@@ -1,3 +1,4 @@
+import NotesWidget from "../components/NotesWidget";
 import TimeWidget from "../components/TimeWidget";
 import styles from "./DashboardPage.module.css";
 
@@ -9,7 +10,9 @@ function DashboardPage() {
       <div className={styles.div3}>
         <TimeWidget />
       </div>
-      <div className={styles.div4}></div>
+      <div className={styles.div4}>
+        <NotesWidget />
+      </div>
       <div className={styles.div5}></div>
     </div>
   );
