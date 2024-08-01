@@ -25,13 +25,15 @@
 
 /* Container Queries */
 
-/* Large */
+
 @container (min-width: 600px) {
-    /* .avatar {
-        background-color: red;
-        padding: 0px;
-        margin: 0px;
-    } */
-
-
+    .details {
+        display: flex;
+        flex-direction: column;
+        padding: 40px 0px;
+        justify-content: space-around;
+        /* background-color: red; */
+        font-size: 2rem;
+        font-weight: bold;
+    }
 }

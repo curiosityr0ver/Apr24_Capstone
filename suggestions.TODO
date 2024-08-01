@@ -8,3 +8,4 @@
 > Use container queries for dynamic sizing of widgets
 > Make the app responsive
 > Read Me file
+> For GenrePage and Carousel page, protected route should check both user and selected, if only user is present, redirect to genre page, or else to the register
