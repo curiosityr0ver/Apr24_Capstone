@@ -1,3 +1,10 @@
+<h2>🧐 Features</h2>
+
+Here're some of the APIs that we've used in the project:
+
+- https://www.weatherapi.com/
+- https://www.themoviedb.org/
+
 <h2>🛠️ Installation Steps:</h2>
 
 <p>1. clone the repo</p>
