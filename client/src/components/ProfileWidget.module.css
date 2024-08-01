@@ -1,14 +1,15 @@
 .container {
+    container-type: inline-size;
     height: 100%;
     width: 100%;
     background: #5746EA;
     border-radius: 20px;
-    padding: 20px;
+    padding: 10px;
     display: flex;
 }
 
 .avatar img {
-    width: 30%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -20,4 +21,17 @@
 .genres {
     display: flex;
     flex-wrap: wrap;
+}
+
+/* Container Queries */
+
+/* Large */
+@container (min-width: 600px) {
+    /* .avatar {
+        background-color: red;
+        padding: 0px;
+        margin: 0px;
+    } */
+
+
 }

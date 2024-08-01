@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import fetchMovieByGenre from "../api/fetchMovies";
 import styles from "./GenreRow.module.css";
-import defaultGenres from "../data/genres";
-const genreIDs = [28, 18, 10749, 53, 37, 27, 14, 10402, 878];
+import { defaultGenres, getGenreId } from "../data/genres";
 
 function GenreRow({ genre }) {
 	const index = defaultGenres.indexOf(genre);
