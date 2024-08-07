@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import fetchNews from "../api/fetchNews";
+import fetchNews from "../../api/fetchNews";
 import styles from "./NewsWidget.module.css";
 
 function NewsWidget() {
@@ -14,7 +14,6 @@ function NewsWidget() {
     });
   }, []);
 
-  console.log(news);
 
   return (
     <div className={styles.container}>

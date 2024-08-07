@@ -1,9 +1,11 @@
 import { useContext } from "react";
 import styles from "./ProfileWidget.module.css";
-import { AppContext } from "../context/AppContext";
-import userAvatar from "../assets/userAvatar.png";
+import { AppContext } from "../../context/AppContext";
+import userAvatar from "../../assets/userAvatar.png";
 function ProfileWidget() {
   const { user, selectedGenres } = useContext(AppContext);
+
+  console.log(selectedGenres)
 
   return (
     <div className={styles.container}>
@@ -18,7 +20,7 @@ function ProfileWidget() {
         <div className={styles.genres}>
           {selectedGenres.slice(0, 4).map((genre, index) => (
             <div key={index} className={styles.genre}>
-              {genre}
+              {genre.name}
             </div>
           ))}
         </div>

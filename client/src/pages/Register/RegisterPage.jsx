@@ -1,9 +1,10 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { AppContext } from "../context/AppContext";
+import { AppContext } from "../../context/AppContext";
 import styles from "./RegisterPage.module.css";
-import Form from "../components/Form";
-import validateForm from "../utils/validateForm";
+import Form from "../../components/Form/Form";
+import validateForm from "../../utils/validateForm";
 
 export default function RegisterPage() {
   const { user, setUser } = useContext(AppContext);
@@ -47,17 +48,17 @@ export default function RegisterPage() {
           phone={phone}
           setPhone={setPhone}
           error={error}
-          setError={setError}
-          submitHandler={submitHandler}
+            submitHandler={submitHandler}
         />
         <div className={styles.footer}>
           <p>
-            By clicking on Sign up. you agree to Superapp{" "}
+            By clicking on Sign up, you agree to Superapp's
             <span>Terms and Conditions of Use</span>
           </p>
           <p>
-            To learn more about how Superapp collects, uses, shares and protects
-            your personal data please head Superapp <span>Privacy Policy</span>
+            To learn more about how Superapp collects, uses, shares, and
+            protects your personal data, please read Superapp's
+            <span>Privacy Policy</span>
           </p>
         </div>
       </div>

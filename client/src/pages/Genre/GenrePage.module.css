@@ -1,0 +1,119 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+}
+
+.left {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.heading {
+  font-size: 32px;
+  font-weight: bold;
+  color: grey;
+}
+
+.subHeading {
+  font-size: 22px;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+.selectedGenres {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.selectedGenre {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #72db73;
+  color: white;
+  border-radius: 28px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.removeIcon {
+  margin-left: 5px;
+}
+
+.selectedGenre:hover {
+  background-color: #5eb960;
+}
+
+.error {
+  color: red;
+  margin-top: 20px; /* Ensure there’s space above the error */
+  text-align: center; /* Center align the error message */
+  font-size: 16px; /* Font size for error message */
+  width: 100%; /* Ensure the error message spans the full width */
+}
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.genre {
+  padding: 10px;
+  background-color: grey;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  min-width: 100px;
+}
+
+.genre p {
+  margin: 0;
+}
+
+.genre:hover {
+  background-color: #ddd;
+}
+
+.genre.selected {
+  background-color: #72db73;
+  color: white;
+}
+
+.nextButton {
+  padding: 10px 20px;
+  background-color: #72db73;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nextButton:hover {
+  background-color: #5eb960;
+}

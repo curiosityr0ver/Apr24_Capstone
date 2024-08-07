@@ -18,6 +18,12 @@ export const AppProvider = ({ children }) => {
     localStorage.setItem("selectedGenres", JSON.stringify(selectedGenres));
   }, [selectedGenres]);
 
+  const clearAppData = () => {
+    localStorage.clear();
+    setUser(null);
+    setSelectedGenres([]);
+  };
+
   return (
     <AppContext.Provider
       value={{
@@ -25,6 +31,7 @@ export const AppProvider = ({ children }) => {
         setUser,
         selectedGenres,
         setSelectedGenres,
+        clearAppData,
       }}
     >
       {children}

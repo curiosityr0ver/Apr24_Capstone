@@ -1,0 +1,71 @@
+.container {
+  height: 100%;
+  width: 100%;
+  background: #101744;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.date,
+.time {
+  flex: 1;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 80px;
+}
+
+.temperature {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.condition {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 0 10px;
+}
+
+.detail span {
+  font-size: 1rem;
+  margin: 2px 0;
+}

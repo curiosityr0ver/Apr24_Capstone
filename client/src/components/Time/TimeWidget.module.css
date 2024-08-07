@@ -1,0 +1,60 @@
+.container {
+  height: 100%;
+  width: 100%;
+  background: #1e2343;
+  border-radius: 20px;
+  display: flex;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.left {
+  height: 180px;
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 5px;
+  box-shadow: 0px 6px 26px 0px #0000009c inset, -3px -7px 16px 0px #5f58583b;
+  background: #191e39;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+}
+
+.configure {
+  display: flex;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.cell {
+  padding: 5px 0px;
+  height: 100%;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.right button {
+  background: #ff6a6a;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  width: 85%;
+  margin: 0 auto;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}

@@ -1,0 +1,60 @@
+.container {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px 40px;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box; /* Ensure padding does not affect the overall size */
+}
+
+.profileWidget {
+  grid-area: 1 / 1 / 3 / 2;
+  overflow: hidden; 
+}
+
+.weatherWidget {
+  grid-area: 3 / 1 / 5 / 2;
+}
+
+.timerWidget {
+  grid-area: 4 / 1 / 6 / 3;
+}
+
+.notesWidget {
+  grid-area: 1 / 2 / 4 / 3;
+}
+
+.newsWidget {
+  grid-area: 1 / 3 / 5 / 4;
+ 
+}
+
+.nextButton {
+  grid-area: 5 / 3 / 6 / 4;
+  align-self: end;
+  justify-self: end;
+  padding: 10px 20px;
+  background-color: #72db73;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nextButton:hover {
+  background-color: #5eb960;
+}
+
+/* Ensure profile image stays contained */
+/* .profileWidget img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+} */

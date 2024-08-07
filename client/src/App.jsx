@@ -1,9 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import RegisterPage from "./pages/RegisterPage";
-import NotFoundPage from "./pages/NotFoundPage";
-import GenrePage from "./pages/GenrePage";
-import CarouselPage from "./pages/CarouselPage";
-import DashboardPage from "./pages/DashboardPage";
+import RegisterPage from "./pages/Register/RegisterPage";
+import NotFoundPage from "./pages/NotFound/NotFoundPage";
+import GenrePage from "./pages/Genre/GenrePage";
+import CarouselPage from "./pages/Carousel/CarouselPage";
+import DashboardPage from "./pages/Dashboard/DashboardPage";
+import MoviePage from "./pages/Movie/MoviePage";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         <Route path="/genres" element={<GenrePage />} />
         <Route path="/carousel" element={<CarouselPage />} />
         <Route path="/dashboard" element={<DashboardPage />} />
-        <Route path="/movies" element={<RegisterPage />} />
+        <Route path="/movies" element={<MoviePage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>

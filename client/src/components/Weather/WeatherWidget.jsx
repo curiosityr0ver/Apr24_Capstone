@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import fetchWeather from "../api/fetchWeather";
+import fetchWeather from "../../api/fetchWeather";
 import styles from "./WeatherWidget.module.css";
 
 function WeatherWidget() {
