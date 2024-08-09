@@ -19,7 +19,6 @@ const Form = ({
     submitHandler();
   };
 
-  console.log(error)
   return (
     <div className={styles.formContainer}>
       <form onSubmit={handleSubmit}>

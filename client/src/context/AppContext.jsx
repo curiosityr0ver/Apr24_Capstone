@@ -11,12 +11,20 @@ export const AppProvider = ({ children }) => {
     JSON.parse(localStorage.getItem("selectedGenres")) || []
   );
 
+  const [notes, setNotes] = useState(
+    JSON.parse(localStorage.getItem("notes")) || ""
+  );
+
   useEffect(() => {
     localStorage.setItem("user", JSON.stringify(user));
   }, [user]);
   useEffect(() => {
     localStorage.setItem("selectedGenres", JSON.stringify(selectedGenres));
   }, [selectedGenres]);
+
+  useEffect(() => {
+    localStorage.setItem("notes", JSON.stringify(notes));
+  }, [notes]);
 
   const clearAppData = () => {
     localStorage.clear();
@@ -31,6 +39,8 @@ export const AppProvider = ({ children }) => {
         setUser,
         selectedGenres,
         setSelectedGenres,
+        notes,
+        setNotes,
         clearAppData,
       }}
     >
